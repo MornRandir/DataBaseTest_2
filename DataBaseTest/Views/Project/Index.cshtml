@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "AddProject";
+}
+
+<h1>View</h1>
+
+<div class="input-group">
+  <span class="input-group-text">Project</span>
+  <textarea class="form-control" aria-label="Pease name a project"></textarea>
+</div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
+  <span class="input-group-text">сабака</span>
+  <input type="text" class="form-control" placeholder="mail" aria-label="Server" />
+</div>
+<div class="input-group">
+  <span class="input-group-text">Main info</span>
+  <textarea class="form-control" aria-label="Write Description"></textarea>
+</div>
+
+
+@foreach(var index in ViewBag.Fun)
+{ 
+    <h2>
+        @index.name
+        <a herf="/Project/Add/@index.id">Add Info</a>
+    </h2>
+
+}

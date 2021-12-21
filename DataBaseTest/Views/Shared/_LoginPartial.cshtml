@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<meta name="google-signin-client_id" content="507407976872-7pjg5q25gpvpk5fiuncpamu1o168beh0.apps.googleusercontent.com">
+
+
+<script type="text/javascript">
+    function init() {
+      gapi.load('auth2', function() {
+        /* Ready. Make a call to gapi.auth2.init or some other API */
+      });
+    }
+</script>
+
+<script type="text/javascript">
+    function init() 
+    {
+        client_id: '507407976872-7pjg5q25gpvpk5fiuncpamu1o168beh0.apps.googleusercontent.com'
+    }
+</script>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
