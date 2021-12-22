@@ -1,11 +1,12 @@
 ﻿using System.Diagnostics;
 using DataBaseTest.Models;
 using Microsoft.AspNetCore.Mvc;
-using DataBaseTest.Models;
+
+//ProjectController
 
 namespace DataBaseTest.Controllers
 {
-    public class AddProject : Controller
+    public class ProjectController : Controller
     {
         public ActionResult Index()
         {
