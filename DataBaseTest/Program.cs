@@ -1,8 +1,6 @@
 using DataBaseTest.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Web;
-using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,3 +42,5 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+
