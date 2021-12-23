@@ -1,33 +1,20 @@
 ﻿@{
     ViewData["Title"] = "DataBase";
 }
-@using Microsoft.AspNetCore.Http;
 
 
 <h1>@ViewData["Title"]</h1>
 
 
-
-<h1>Complex Type</h1>
-<form id="form1" method="post" action="api/updates/AddOrder" 
-    enctype="application/x-www-form-urlencoded">
-    <div>
-        <label for="name">Name of Project</label>
-    </div>
-    <div>
-        <input name="name" type="text" />
-    </div>
-    <div>
-        <label for="date">Date</label>
-    </div>
-    <div>
-        <input name="date" type="text" />
-    </div>
-    <div>
-        <input type="submit" value="Submit" />
-    </div>
+<form method="post">
+    <label>Name</label><br />
+    <input type="text" name="name" /><br /><br />
+    <label>Tasks</label><br />
+    <input type="text" name="tasks" /><br /><br />
+    <label>Email</label><br />
+    <input type="text" name="email" /><br /><br />
+    <input type="submit" value="Save and send" />
 </form>
-
 
 
 
