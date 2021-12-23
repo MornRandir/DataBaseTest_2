@@ -1,16 +1,38 @@
 ﻿@{
     ViewData["Title"] = "DataBase";
 }
-
-
-
+@using Microsoft.AspNetCore.Http;
 
 
 <h1>@ViewData["Title"]</h1>
 
 
-<button type="button" class="btn btn-danger">Удалить</button>
-<button type="button" class="btn btn-primary">Изменить</button>
+
+<h1>Complex Type</h1>
+<form id="form1" method="post" action="api/updates/complex" 
+    enctype="application/x-www-form-urlencoded">
+    <div>
+        <label for="status">Status</label>
+    </div>
+    <div>
+        <input name="status" type="text" />
+    </div>
+    <div>
+        <label for="date">Date</label>
+    </div>
+    <div>
+        <input name="date" type="text" />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+
+
+
+
+<button type="button" class="btn btn-danger">Изменить</button>
 
 
 <!-- Button ADD trigger modal -->
@@ -20,8 +42,17 @@
   data-mdb-toggle="modal"
   data-mdb-target="#addModal"
 >
-  Add Employee
+  Add Order
 </button>
+
+<a class="" asp-area="" asp-controller="Order" asp-action="Index">
+    <button type="button" class="btn btn-primary">
+        OpenAll
+    </button>
+</a>
+
+
+
 
 
 <!-- Modal -->
@@ -32,10 +63,14 @@
   aria-labelledby="addModal"
   aria-hidden="true"
 >
+
+
+
+
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add new employee to DataBase</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add new Order to DataBase</h5>
         <button
           type="button"
           class="btn-close"
@@ -46,11 +81,11 @@
       <div class="modal-body">
         <div class="input-group">
           <span class="input-group-text">Project name</span>
-          <textarea class="form-control" aria-label="Pease name a project"></textarea>
+          <textarea class="form-control" name="name" aria-label="Pease name a project"></textarea>
         </div>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
-          <span class="input-group-text">сабака</span>
+          <span class="input-group-text">@@</span>
           <input type="text" class="form-control" placeholder="mail" aria-label="Server" />
         </div>
         <div class="input-group">
@@ -62,12 +97,10 @@
         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button submit" value="Submit" class="submit" class="btn btn-primary submit">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 
 
-
-<a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Index">TestProjectIndex</a>

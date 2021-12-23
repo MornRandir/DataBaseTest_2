@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Order";
+}
+
+@ViewBag.Fun
+@ViewBag.OrderId
+@foreach(var index in ViewBag.Fun)
+{ 
+    <h2>
+        @index.name
+        <a herf="/Project/All/@index.id">Add Info</a>
+    </h2>
+
+}
